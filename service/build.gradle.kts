@@ -22,21 +22,19 @@ repositories {
 }
 
 extra["springCloudVersion"] = "2020.0.4"
-//extra["wavefrontVersion"] = "2.2.0"
+//extra["wavefrontVersion"] = "2.1.0"
 
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-//    implementation("com.wavefront:wavefront-spring-boot-starter")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
-//    compileOnly("org.projectlombok:lombok")
-//    annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 }
